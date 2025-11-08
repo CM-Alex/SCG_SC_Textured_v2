@@ -210,3 +210,44 @@ model-viewer > #ar-prompt > img {
   font-size: 0.9em;
   color: rgba(0,0,0,0.7);
 }
+
+/* --- Sidebar --- */
+#sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  z-index: 10;
+}
+
+#sidebar.hidden {
+  transform: translateX(100%);
+}
+
+#closeSidebar {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#sidebarTitle {
+  margin-top: 40px;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#sidebarContent {
+  margin-top: 1em;
+}
