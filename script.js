@@ -10,4 +10,15 @@ const onProgress = (event) => {
     progressBar.classList.remove('hide');
   }
 };
+
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+// Dismiss the intro overlay on click or tap
+document.addEventListener('click', () => {
+  const overlay = document.getElementById('intro-overlay');
+  if (overlay) {
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+    setTimeout(() => overlay.remove(), 500);
+  }
+}, { once: true });
