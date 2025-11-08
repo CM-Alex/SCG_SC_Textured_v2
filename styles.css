@@ -271,4 +271,12 @@ model-viewer > #ar-prompt > img {
   font-size: 16px;
   padding: 0 1em;
 }
-/
+
+/* --- QR Code Tab Button --- */
+#qrTab {
+  position: absolute;
+  top: 20px;
+  right: -60px;
+  transform: rotate(-90deg);
+  transform-origin: top right;
+  background: rgba(255, 255, 255
