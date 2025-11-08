@@ -225,6 +225,9 @@ model-viewer > #ar-prompt > img {
   transform: translateX(-100%);
   transition: transform 0.4s ease;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 #sidebar.hidden {
@@ -247,11 +250,24 @@ model-viewer > #ar-prompt > img {
 
 #sidebarTitle {
   margin-top: 40px;
+  margin-bottom: 48px;
   font-family: Futura, Helvetica Neue, sans-serif;
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
 
 #sidebarContent {
-  margin-top: 1em;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  padding: 0 1em;
 }
