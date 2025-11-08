@@ -53,3 +53,11 @@ closeSidebar.addEventListener('click', () => {
   modelViewer.cameraTarget = '0m 0m 0m';
   modelViewer.jumpCameraToGoal();
 });
+
+// QR Code tab and sidebar logic
+const qrTab = document.getElementById('qrTab');
+const qrSidebar = document.getElementById('qrSidebar');
+
+qrTab.addEventListener('click', () => {
+  qrSidebar.classList.toggle('visible');
+});
