@@ -1,48 +1,88 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template</title>
+    <title>Situation City Model Viewer</title>
     <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="description" content="Interactive utilities training model using <model-viewer>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-    <!-- <model-viewer> HTML element -->
-    <model-viewer src="VirtualWalkTest_texturedv6.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.jpeg" shadow-intensity="2" exposure="1.01" auto-rotate camera-orbit="1637deg 55.31deg 67.08m" field-of-view="12deg" environment-image="whipple_creek_regional_park_04_1k.hdr" skybox-image="whipple_creek_regional_park_04_1k.hdr" shadow-softness="1">
+    <!-- Model Viewer -->
+    <model-viewer 
+      src="VirtualWalkTest_texturedv6.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      tone-mapping="neutral"
+      poster="poster.jpeg"
+      shadow-intensity="2"
+      exposure="1.01"
+      auto-rotate
+      camera-orbit="1637deg 55.31deg 67.08m"
+      field-of-view="12deg"
+      environment-image="whipple_creek_regional_park_04_1k.hdr"
+      skybox-image="whipple_creek_regional_park_04_1k.hdr"
+      shadow-softness="1"
+    >
+      <!-- Hotspots -->
       <button class="Hotspot" slot="hotspot-2" data-position="7.000374834103798m -3.3612545496501127m 0.41393207921335984m" data-normal="-0.028934896560848133m 0.5619625650268115m -0.8266564263764602m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">OPEN TRENCH</div>
-      </button><button class="Hotspot" slot="hotspot-3" data-position="2.7163599581876205m -3.318742054887486m -3.1301539975249777m" data-normal="-0.07134638945517287m 0.9973506306472799m 0.014191978691636652m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-3" data-position="2.7163599581876205m -3.318742054887486m -3.1301539975249777m" data-normal="-0.07134638945517287m 0.9973506306472799m 0.014191978691636652m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">MANHOLE</div>
-      </button><button class="Hotspot" slot="hotspot-4" data-position="0.6218454088201213m -2.3513674618113707m -8.682485580444332m" data-normal="0m 0m -1m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-4" data-position="0.6218454088201213m -2.3513674618113707m -8.682485580444332m" data-normal="0m 0m -1m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">PEDESTRIAN BRIDGE</div>
-      </button><button class="Hotspot" slot="hotspot-5" data-position="-5.073069862417107m -2.928766782145722m -4.879497714820921m" data-normal="0.7869164083257657m 0.3073194227158445m 0.5350862909188357m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-5" data-position="-5.073069862417107m -2.928766782145722m -4.879497714820921m" data-normal="0.7869164083257657m 0.3073194227158445m 0.5350862909188357m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">CULVERT</div>
-      </button><button class="Hotspot" slot="hotspot-6" data-position="-1.7311329643392095m -3.388929605484009m 4.029001198591473m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-6" data-position="-1.7311329643392095m -3.388929605484009m 4.029001198591473m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">STORM DRAIN</div>
-      </button><button class="Hotspot" slot="hotspot-8" data-position="4.590347436184585m -3.388929605484009m 2.3937263015335684m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-8" data-position="4.590347436184585m -3.388929605484009m 2.3937263015335684m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">BUS STOP</div>
-      </button><button class="Hotspot" slot="hotspot-10" data-position="-3.384970176358198m -1.6760665520565112m -2.2781739534370327m" data-normal="0m 0.9999999999987664m -0.0000015707359329779016m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-10" data-position="-3.384970176358198m -1.6760665520565112m -2.2781739534370327m" data-normal="0m 0.9999999999987664m -0.0000015707359329779016m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">POWERLINES</div>
-      </button><button class="Hotspot" slot="hotspot-12" data-position="2.945306109994057m -3.3134541511535645m -6.478632251042765m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-12" data-position="2.945306109994057m -3.3134541511535645m -6.478632251042765m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">PAVEMENT VARIATIONS</div>
-      </button><button class="Hotspot" slot="hotspot-13" data-position="-8.631381902372304m -3.3883547782897883m -0.33600656412337404m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-13" data-position="-8.631381902372304m -3.3883547782897883m -0.33600656412337404m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">MEDIAN</div>
-      </button><button class="Hotspot" slot="hotspot-14" data-position="-0.27186810074961065m -3.367635726928704m 6.365074885094558m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
+      </button>
+      <button class="Hotspot" slot="hotspot-14" data-position="-0.27186810074961065m -3.367635726928704m 6.365074885094558m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">LIGHTPOST</div>
       </button>
+
+      <!-- Progress Bar -->
       <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
+        <div class="update-bar"></div>
       </div>
+
+      <!-- AR Button -->
       <button slot="ar-button" id="ar-button">
-          View in your space
+        View in your space
       </button>
+
+      <!-- AR Prompt -->
       <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
+        <img src="ar_hand_prompt.png">
       </div>
-    </model-viewer>  
+    </model-viewer>
+
+    <!-- Intro Overlay -->
+    <div id="intro-overlay">
+      <div class="intro-content">
+        <h2>Welcome to Situation City</h2>
+        <p>Locate and press the pulsing dots to explore how utilities workers interact with real-world infrastructure and the design considerations that shape the field.</p>
+        <p class="dismiss-note">Tap anywhere to dismiss this message</p>
+      </div>
+    </div>
+
     <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </body>
 </html>
