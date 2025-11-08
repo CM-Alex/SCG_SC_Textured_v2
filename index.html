@@ -64,7 +64,9 @@
       </div>
 
       <!-- AR Button -->
-      <button slot="ar-button" id="ar-button">View in your space</button>
+      <button slot="ar-button" id="ar-button">
+        View in your space
+      </button>
 
       <!-- AR Prompt -->
       <div id="ar-prompt">
@@ -73,7 +75,7 @@
     </model-viewer>
 
     <!-- Sidebar -->
-    <div id="sidebar">
+    <div id="sidebar" class="hidden">
       <button id="closeSidebar">✕</button>
       <h2 id="sidebarTitle">Hotspot</h2>
       <div id="sidebarContent"></div>
@@ -91,5 +93,36 @@
     <!-- Scripts -->
     <script src="script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script>
+      const modelViewer = document.getElementById('modelViewer');
+      const sidebar = document.getElementById('sidebar');
+      const sidebarTitle = document.getElementById('sidebarTitle');
+      const closeSidebar = document.getElementById('closeSidebar');
+
+      document.querySelectorAll('.Hotspot').forEach(hotspot => {
+        hotspot.addEventListener('click', () => {
+          const position = hotspot.dataset.position.split(' ').map(p => parseFloat(p));
+          const target = `${position[0]}m ${position[1]}m ${position[2]}m`;
+          const title = hotspot.querySelector('.HotspotAnnotation')?.textContent || 'Hotspot';
+
+          modelViewer.cameraTarget = target;
+          modelViewer.cameraOrbit = '0deg 45deg 0.025m';
+          modelViewer.jumpCameraToGoal();
+
+          sidebar.classList.remove('visible');
+          setTimeout(() => {
+            sidebarTitle.textContent = title;
+            sidebar.classList.add('visible');
+          }, 300);
+        });
+      });
+
+      closeSidebar.addEventListener('click', () => {
+        sidebar.classList.remove('visible');
+        modelViewer.cameraOrbit = '1637deg 45deg 67.08m';
+        modelViewer.cameraTarget = '0m 0m 0m';
+        modelViewer.jumpCameraToGoal();
+      });
+    </script>
   </body>
 </html>
