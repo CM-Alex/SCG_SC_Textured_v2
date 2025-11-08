@@ -81,6 +81,15 @@
       <div id="sidebarContent"></div>
     </div>
 
+    <!-- QR Code Tab -->
+    <button id="qrTab">SHARE VIA QR CODE</button>
+
+    <!-- QR Code Sidebar -->
+    <div id="qrSidebar">
+      <img src="SituationCityQRCode.png" alt="QR Code">
+      <p>Scan this QR Code with your phone's camera to try it on mobile. Additionally, you can project the city as an Augmented Reality (AR) Hologram!</p>
+    </div>
+
     <!-- Intro Overlay -->
     <div id="intro-overlay">
       <div class="intro-content">
@@ -98,6 +107,8 @@
       const sidebar = document.getElementById('sidebar');
       const sidebarTitle = document.getElementById('sidebarTitle');
       const closeSidebar = document.getElementById('closeSidebar');
+      const qrTab = document.getElementById('qrTab');
+      const qrSidebar = document.getElementById('qrSidebar');
 
       document.querySelectorAll('.Hotspot').forEach(hotspot => {
         hotspot.addEventListener('click', () => {
@@ -122,6 +133,10 @@
         modelViewer.cameraOrbit = '1637deg 45deg 67.08m';
         modelViewer.cameraTarget = '0m 0m 0m';
         modelViewer.jumpCameraToGoal();
+      });
+
+      qrTab.addEventListener('click', () => {
+        qrSidebar.classList.toggle('visible');
       });
     </script>
   </body>
