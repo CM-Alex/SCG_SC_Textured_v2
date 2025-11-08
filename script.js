@@ -35,16 +35,20 @@ document.querySelectorAll('.Hotspot').forEach(hotspot => {
     const title = hotspot.querySelector('.HotspotAnnotation')?.textContent || 'Hotspot';
 
     modelViewer.cameraTarget = target;
-    modelViewer.cameraOrbit = '0deg 45deg 0.5m';
+    modelViewer.cameraOrbit = '0deg 45deg 0.025m';
     modelViewer.jumpCameraToGoal();
 
-    sidebarTitle.textContent = title;
-    sidebar.classList.remove('hidden');
+    // Animate sidebar fly-back and re-fly-in
+    sidebar.classList.remove('visible');
+    setTimeout(() => {
+      sidebarTitle.textContent = title;
+      sidebar.classList.add('visible');
+    }, 300);
   });
 });
 
 closeSidebar.addEventListener('click', () => {
-  sidebar.classList.add('hidden');
+  sidebar.classList.remove('visible');
   modelViewer.cameraOrbit = '1637deg 45deg 67.08m';
   modelViewer.cameraTarget = '0m 0m 0m';
   modelViewer.jumpCameraToGoal();
